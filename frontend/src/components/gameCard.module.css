@@ -1,0 +1,19 @@
+.card {
+  display: flex;
+  column-gap: 16px;
+}
+.image {
+  border-radius: 8px;
+}
+.data {
+  flex-basis: 23.5%;
+}
+.label {
+  font-size: 11px;
+  color: #95acda;
+  line-height: 21px;
+}
+.value {
+  font-size: 14px;
+  line-height: 16.5px;
+}

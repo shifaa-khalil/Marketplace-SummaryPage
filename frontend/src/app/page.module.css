@@ -10,36 +10,62 @@
   font-family: "Ubuntu", sans-serif;
 }
 .container {
-  width: 63%;
-  /* border: 3px solid white; */
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  /* column-gap: 0.03%; */
 }
-.rightcontainer {
-  flex-basis: 38.7%;
-  /* border: 3px solid purple; */
-  display: flex;
-  justify-content: center;
-}
-.rightside {
-  width: 86%;
-  border: 1px solid #2f384c;
-  border-radius: 8px;
-  padding: 32px 9%;
-}
+/* left-side */
 .leftside {
-  /* border: 3px solid blue; */
   flex-basis: 61%;
 }
 .mainimg {
-  /* height: 396px; */
+  border-radius: 8px;
+}
+.description {
+  margin-bottom: 60px;
+}
+.description h1 {
+  font-size: 21px;
+  margin: 32px 0;
+}
+.description ol {
+  list-style-type: none;
+  counter-reset: ordered-list;
+}
+.description li::before {
+  content: counter(ordered-list) "- ";
+  counter-increment: ordered-list;
+}
+.description p,
+.description li {
+  line-height: 21px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: regular;
+}
+.sellerContainer,
+.reviewContainer {
+  margin-top: 60px;
+}
+.sectionTitle {
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 26px;
+  margin-bottom: 20px;
+}
+/* right-side */
+.rightside {
+  flex-basis: 33.5%;
+  border: 1px solid #2f384c;
+  border-radius: 8px;
+  padding: 32px;
+  height: fit-content;
 }
 .title {
   color: #60759f;
   border: 1px solid #60759f;
   border-radius: 100px;
-  font-size: 7px;
+  font-size: 11px;
   font-weight: bold;
   width: 22%;
   height: fit-content;
@@ -48,13 +74,38 @@
 }
 .heading {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 32px;
   margin-bottom: 20px;
-  margin-top: 15px;
+  margin-top: 10px;
+  line-height: 40px;
 }
 .subheading {
-  font-size: 8.75px;
+  font-size: 14px;
   color: #95acda;
+  margin-bottom: 20px;
+  line-height: 21px;
+}
+.servicesContainer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  margin-bottom: 20px;
+}
+.protectionNote {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-top: 17px;
+  border-top: 1px solid #2f384c;
+  font-size: 13px;
+  font-weight: regular;
+  color: #95acda;
+  line-height: 20px;
+  margin-top: 32px;
+}
+.protectionNote p {
+  flex-basis: 80.8%;
 }
 /* .description {
   display: inherit;
