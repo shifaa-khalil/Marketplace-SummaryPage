@@ -1,14 +1,48 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Image from "next/image";
+import styles from "./page.module.css";
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <div className={styles.container}>
+        <div className={styles.leftside}>
+          {/* <div className={styles.mainimg}> */}
+          <Image
+            className={styles.mainimg}
+            src="/master.svg"
+            alt="master coaching"
+            layout="responsive"
+            width={100}
+            height={37}
+            priority
+          />
+        </div>
+        {/* </div> */}
+        <div className={styles.rightcontainer}>
+          <div className={styles.rightside}>
+            <div className={styles.row}>
+              <div className={styles.title}>Coaching</div>
+            </div>
+            <p className={styles.heading}>
+              | Master+ League of Legends coaching | All roles |
+            </p>
+            <p className={styles.subheading}>
+              My coaching: macro - wave management - meta discussions - vods -
+              decision making in game - vision - positioning - best picks -
+              match-up and worse lanes - build decisions - In-game settings
+            </p>
+          </div>
+        </div>
+      </div>
+      {/* <div className={styles.description}>
         <div>
           <a
             href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
@@ -26,9 +60,9 @@ export default function Home() {
             />
           </a>
         </div>
-      </div>
+      </div> */}
 
-      <div className={styles.center}>
+      {/* <div className={styles.center}>
         <Image
           className={styles.logo}
           src="/next.svg"
@@ -37,9 +71,9 @@ export default function Home() {
           height={37}
           priority
         />
-      </div>
+      </div> */}
 
-      <div className={styles.grid}>
+      {/* <div className={styles.grid}>
         <a
           href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
           className={styles.card}
@@ -50,8 +84,8 @@ export default function Home() {
             Docs <span>-&gt;</span>
           </h2>
           <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
+        </a> */}
+      {/* 
         <a
           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
           className={styles.card}
@@ -89,7 +123,7 @@ export default function Home() {
             Instantly deploy your Next.js site to a shareable URL with Vercel.
           </p>
         </a>
-      </div>
+      </div> */}
     </main>
-  )
+  );
 }
