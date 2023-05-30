@@ -1,0 +1,23 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #11141a;
+  padding: 14px 20px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.body {
+  line-height: 21px;
+  font-size: 14px;
+  font-weight: normal;
+  margin-bottom: 10px;
+}

@@ -44,14 +44,25 @@
   font-weight: regular;
 }
 .sellerContainer,
-.reviewContainer {
+.reviewContainer,
+.policyContainer,
+.faqContainer {
   margin-top: 60px;
 }
 .sectionTitle {
   font-size: 21px;
   font-weight: bold;
   line-height: 26px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+}
+.expand {
+  color: #00f9ff;
+  background-color: transparent;
+  border: none;
+  font-weight: medium;
+  font-size: 14px;
+  line-height: 21px;
+  cursor: pointer;
 }
 /* right-side */
 .rightside {
