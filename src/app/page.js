@@ -10,6 +10,7 @@ import PolicyCard from "@/components/policyCard";
 import React, { useState } from "react";
 
 export default function Home() {
+  const [buyClicked, setBuyClicked] = useState(false);
   const [reviewsExpanded, setReviewsExpanded] = useState(false);
 
   const reviews = [
@@ -217,23 +218,35 @@ export default function Home() {
             match-up and worse lanes - build decisions - In-game settings
           </p>
           <div className={styles.servicesContainer}>
-            <ServiceCard
-              title="VOD review 30m"
-              details="VOD review of one of your games and I will point out the mistakes you made ... +more"
-              price="6.35"
-            />
-            <ServiceCard
-              title="Duo coaching 1h"
-              details="Duo coaching - how to generally play the game in every situation (builds/ru... +more"
-              price="12.71"
-            />
-            <ServiceCard
-              title="MASTER SUPPORT 4h"
-              details="4h of pre-game discussion (w/ opgg) ,skill,desired rank, Live game commenta... +more"
-              price="45.54"
-            />
+            {!buyClicked && (
+              <>
+                <ServiceCard
+                  title="VOD review 30m"
+                  details="VOD review of one of your games and I will point out the mistakes you made... "
+                  price="6.35"
+                />
+                <ServiceCard
+                  title="Duo coaching 1h"
+                  details="Duo coaching - how to generally play the game in every situation (builds/ru... "
+                  price="12.71"
+                />
+                <ServiceCard
+                  title="MASTER SUPPORT 4h"
+                  details="4h of pre-game discussion (w/ opgg) ,skill,desired rank, Live game commenta... "
+                  price="45.54"
+                />
+              </>
+            )}
           </div>
-          <Button text="BUY" />
+          <div className={styles.columnButtons}>
+            <Button
+              text={buyClicked ? "redirecting to the final step.." : "BUY"}
+              onClick={() => setBuyClicked(true)}
+            />
+            {buyClicked && (
+              <Button text="UNDO" onClick={() => setBuyClicked(false)} />
+            )}
+          </div>
           <div className={styles.protectionNote}>
             <p>
               For your own protection and for Challengermode to assist in any

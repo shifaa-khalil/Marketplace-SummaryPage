@@ -102,6 +102,11 @@
   row-gap: 10px;
   margin-bottom: 20px;
 }
+.columnButtons {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
 .protectionNote {
   display: flex;
   justify-content: space-between;
